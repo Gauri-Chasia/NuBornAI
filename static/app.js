@@ -2,8 +2,6 @@ const chatScroll = document.getElementById("chatScroll");
 const input = document.getElementById("composerInput");
 const sendBtn = document.getElementById("sendBtn");
 const resetBtn = document.getElementById("resetBtn");
-const statusDot = document.getElementById("statusDot");
-const statusText = document.getElementById("statusText");
 const sourceList = document.getElementById("sourceList");
 const modelValue = document.getElementById("modelValue");
 const rerankerLine = document.getElementById("rerankerLine");
@@ -50,6 +48,20 @@ function removeThinkingMessage() {
   if (el) el.remove();
 }
 
+function addSetupMessage() {
+  const wrap = document.createElement("div");
+  wrap.className = "msg msg-bot thinking";
+  wrap.id = "setupMsg";
+  wrap.innerHTML = `<div class="msg-bubble">Setting up your documents<span class="thinking-dots"><span>.</span><span>.</span><span>.</span></span></div>`;
+  chatScroll.appendChild(wrap);
+  scrollToBottom();
+}
+
+function removeSetupMessage() {
+  const el = document.getElementById("setupMsg");
+  if (el) el.remove();
+}
+
 function addBotMessage(answer, sources, isError) {
   const group = document.createElement("div");
   group.className = "msg-group msg-bot";
@@ -78,17 +90,16 @@ async function refreshStatus() {
     const data = await res.json();
 
     if (data.error) {
-      statusDot.className = "status-dot error";
-      statusText.textContent = "Failed to load";
+      removeSetupMessage();
       addBotMessage(`Setup error: ${data.error}`, null, true);
       return true; // stop polling
     }
 
     if (data.ready) {
       ready = true;
-      statusDot.className = "status-dot ok";
-      const n = data.chunk_count || 0;
-      statusText.textContent = `${n} chunk${n === 1 ? "" : "s"} indexed`;
+      removeSetupMessage();
+      input.disabled = false;
+      sendBtn.disabled = false;
       modelValue.textContent = data.ollama_model || "—";
       if (data.reranker_model) {
         rerankerLine.style.display = "flex";
@@ -97,14 +108,12 @@ async function refreshStatus() {
       renderSources(data.sources);
       return true; // stop polling
     } else {
-      statusDot.className = "status-dot loading";
-      statusText.textContent = "Building index…";
-      return false;
+      return false; // still building — keep polling
     }
   } catch (e) {
-    statusDot.className = "status-dot error";
-    statusText.textContent = "Can't reach server";
-    return true;
+    removeSetupMessage();
+    addBotMessage("Couldn't reach the server. Is app.py still running?", null, true);
+    return true; // stop polling
   }
 }
 
@@ -183,4 +192,7 @@ input.addEventListener("keydown", (e) => {
 sendBtn.addEventListener("click", sendMessage);
 resetBtn.addEventListener("click", resetConversation);
 
+input.disabled = true;
+sendBtn.disabled = true;
+addSetupMessage();
 pollUntilReady();

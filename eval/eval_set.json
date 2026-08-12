@@ -2,16 +2,108 @@
   "notes": "Fill this in with questions about YOUR indexed documents. 'relevant_sources' must exactly match filenames as they appear in config.SOURCES (e.g. 'newbornnotes.pdf'). Aim for 20-30 questions covering a mix of topics for a meaningful average. A question can have more than one relevant source if multiple documents cover it.",
   "queries": [
     {
-      "question": "How many hours per day does a newborn typically sleep in the first six weeks?",
-      "relevant_sources": ["Healthy Baby Guide BMC.pdf"]
+      "question": "How many wet diapers should a newborn have each day?",
+      "relevant_sources": ["caring-for-your-newborn-handbook.pdf"]
     },
     {
-      "question": "When should a pacifier be introduced for a breastfed baby?",
-      "relevant_sources": ["Healthy Baby Guide BMC.pdf"]
+      "question": "What is the Period of PURPLE Crying?",
+      "relevant_sources": ["caring-for-your-newborn-handbook.pdf"]
     },
     {
-      "question": "What temperature should the baby's room be kept at?",
+      "question": "How long and how often does a baby need to cry for it to be considered colic?",
+      "relevant_sources": ["caring-for-your-newborn-handbook.pdf"]
+    },
+    {
+      "question": "What temperature should a baby's room be kept at for sleep?",
+      "relevant_sources": ["caring-for-your-newborn-handbook.pdf", "newbornhandbookcoverbooklet.pdf"]
+    },
+    {
+      "question": "How many hours a day does a newborn typically sleep in the first few weeks?",
+      "relevant_sources": ["caring-for-your-newborn-handbook.pdf"]
+    },
+    {
+      "question": "What should I do if I see some dried blood around my baby's belly button?",
+      "relevant_sources": ["caring-for-your-newborn-handbook.pdf"]
+    },
+    {
+      "question": "At what rectal temperature should I call the doctor for a baby younger than 3 months old?",
+      "relevant_sources": ["caring-for-your-newborn-handbook.pdf"]
+    },
+    {
+      "question": "What water heater temperature is recommended for bath safety?",
+      "relevant_sources": ["caring-for-your-newborn-handbook.pdf", "newbornnotes.pdf"]
+    },
+    {
+      "question": "How much formula does a newborn typically take per feeding once they're about a week old?",
+      "relevant_sources": ["caring-for-your-newborn-handbook.pdf"]
+    },
+    {
+      "question": "What are the ABCs of safe sleep?",
+      "relevant_sources": ["caring-for-your-newborn-handbook.pdf"]
+    },
+    {
+      "question": "What does the AAP recommend about room-sharing with a newborn?",
       "relevant_sources": ["newbornhandbookcoverbooklet.pdf"]
+    },
+    {
+      "question": "What are some early hunger cues a baby shows before crying?",
+      "relevant_sources": ["newbornhandbookcoverbooklet.pdf"]
+    },
+    {
+      "question": "How is postpartum depression different from the baby blues?",
+      "relevant_sources": ["newbornhandbookcoverbooklet.pdf"]
+    },
+    {
+      "question": "What items should never be left in a crib with a baby?",
+      "relevant_sources": ["newbornhandbookcoverbooklet.pdf", "caring-for-your-newborn-handbook.pdf"]
+    },
+    {
+      "question": "When is it generally safe for a newborn to fly on an airplane?",
+      "relevant_sources": ["newbornhandbookcoverbooklet.pdf"]
+    },
+    {
+      "question": "What is a cephalohematoma?",
+      "relevant_sources": ["newbornhandbookcoverbooklet.pdf"]
+    },
+    {
+      "question": "What are the signs of postpartum psychosis?",
+      "relevant_sources": ["newbornhandbookcoverbooklet.pdf"]
+    },
+    {
+      "question": "What is tibial torsion and is it something to worry about?",
+      "relevant_sources": ["newbornhandbookcoverbooklet.pdf"]
+    },
+    {
+      "question": "How should a rear-facing car seat harness be positioned?",
+      "relevant_sources": ["newbornhandbookcoverbooklet.pdf"]
+    },
+    {
+      "question": "By what age can a baby tell the difference between their mother's milk and cow's milk by smell?",
+      "relevant_sources": ["newbornnotes.pdf"]
+    },
+    {
+      "question": "What sleeping position reduces the risk of SIDS?",
+      "relevant_sources": ["newbornnotes.pdf", "caring-for-your-newborn-handbook.pdf"]
+    },
+    {
+      "question": "Should I give my baby laxatives or enemas if their stools are hard?",
+      "relevant_sources": ["newbornnotes.pdf"]
+    },
+    {
+      "question": "At what ages are routine well-baby checkups typically scheduled in the first two years?",
+      "relevant_sources": ["newbornnotes.pdf", "newbornhandbookcoverbooklet.pdf"]
+    },
+    {
+      "question": "When should solid foods be introduced to a baby?",
+      "relevant_sources": ["newbornnotes.pdf"]
+    },
+    {
+      "question": "Why shouldn't you microwave a baby's bottle?",
+      "relevant_sources": ["newbornnotes.pdf", "caring-for-your-newborn-handbook.pdf"]
+    },
+    {
+      "question": "How long can breast milk be safely frozen?",
+      "relevant_sources": ["newbornnotes.pdf", "caring-for-your-newborn-handbook.pdf"]
     }
   ]
 }

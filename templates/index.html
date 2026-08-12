@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NewbornAI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -14,8 +13,8 @@
 
   <!-- Sidebar -->
   <aside class="sidebar">
-    <div class="brand">
-      <div class="brand-mark" aria-hidden="true">
+    <div class="chatbot">
+      <div class="chatbot-smiley" aria-hidden="true">
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
           <circle cx="11" cy="11" r="9.5" stroke="currentColor" stroke-width="1.4"/>
           <path d="M7 12.2c1.1 1.6 2.4 2.4 4 2.4s2.9-.8 4-2.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
@@ -24,21 +23,12 @@
         </svg>
       </div>
       <div>
-        <div class="brand-name">NewbornAI</div>
-        <div class="brand-sub">grounded in your sources</div>
+        <div class="chatbot-name">NewbornAI</div>
       </div>
     </div>
 
     <div class="sidebar-section">
-      <div class="sidebar-label">Status</div>
-      <div class="status-row" id="statusRow">
-        <span class="status-dot" id="statusDot"></span>
-        <span id="statusText">Connecting…</span>
-      </div>
-    </div>
-
-    <div class="sidebar-section grow">
-      <div class="sidebar-label">Indexed sources</div>
+      <div class="sidebar-label">Sources</div>
       <ol class="source-list" id="sourceList">
         <li class="source-empty">No documents indexed yet — add file paths or URLs to <code>SOURCES</code> in <code>config.py</code>.</li>
       </ol>
@@ -61,15 +51,15 @@
   <main class="chat-panel">
     <header class="chat-header">
       <div>
-        <h1>Ask about newborn care</h1>
-        <p>Answers are grounded only in the documents you've indexed.</p>
+        <h1>A guide for you and your newborn</h1>
+        <p>All answers based on source documents.</p>
       </div>
     </header>
 
     <div class="chat-scroll" id="chatScroll">
       <div class="msg msg-bot">
         <div class="msg-bubble">
-          Hi — I'm ready to answer questions using the documents you've indexed. Ask me anything about newborn care.
+          Hi — ask me anything about newborn care!
         </div>
       </div>
     </div>
@@ -82,7 +72,7 @@
         </svg>
       </button>
     </div>
-    <p class="disclaimer">Not a substitute for medical care. For anything urgent, contact your pediatrician or emergency services.</p>
+    <p class="disclaimer">*Not a substitute for medical care. For anything urgent, contact your pediatrician or emergency services.</p>
   </main>
 
 </div>
