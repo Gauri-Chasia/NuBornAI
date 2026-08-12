@@ -81,8 +81,10 @@ what the LLM says about them.
    which source file(s) should answer each one:
 
    ```json
-   {"question": "How many hours does a newborn sleep at 6 weeks?",
-    "relevant_sources": ["Healthy Baby Guide BMC.pdf"]}
+   {
+     "question": "How many hours does a newborn sleep at 6 weeks?",
+     "relevant_sources": ["Healthy Baby Guide BMC.pdf"]
+   }
    ```
 
    Aim for 20-30 questions spanning different topics for a stable average.

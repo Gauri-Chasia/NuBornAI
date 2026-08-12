@@ -1,0 +1,13 @@
+mode,question,precision,recall,mrr,ndcg
+dense,How many hours per day does a newborn typically sleep in the first six weeks?,0.25,1.0,0.5,0.6309
+dense,When should a pacifier be introduced for a breastfed baby?,0.25,1.0,1.0,1.0
+dense,What temperature should the baby's room be kept at?,0.3333,1.0,1.0,1.0
+bm25,How many hours per day does a newborn typically sleep in the first six weeks?,0.25,1.0,0.5,0.6309
+bm25,When should a pacifier be introduced for a breastfed baby?,0.3333,1.0,0.5,0.6309
+bm25,What temperature should the baby's room be kept at?,0.25,1.0,0.3333,0.5
+hybrid,How many hours per day does a newborn typically sleep in the first six weeks?,0.25,1.0,1.0,1.0
+hybrid,When should a pacifier be introduced for a breastfed baby?,0.25,1.0,1.0,1.0
+hybrid,What temperature should the baby's room be kept at?,0.25,1.0,1.0,1.0
+hybrid_rerank,How many hours per day does a newborn typically sleep in the first six weeks?,0.25,1.0,1.0,1.0
+hybrid_rerank,When should a pacifier be introduced for a breastfed baby?,0.25,1.0,1.0,1.0
+hybrid_rerank,What temperature should the baby's room be kept at?,0.25,1.0,0.3333,0.5

@@ -6,6 +6,10 @@ SOURCES = [
     # "/path/to/your/caring-for-your-newborn-handbook.pdf",
     # "/path/to/your/Healthy Baby Guide BMC.pdf",
     # "/path/to/your/newbornhandbookcoverbooklet.pdf",
+    "documents/newbornnotes.pdf",
+    "documents/caring-for-your-newborn-handbook.pdf", 
+    "documents/Healthy Baby Guide BMC.pdf", 
+    "documents/newbornhandbookcoverbooklet.pdf"
 ]
 
 EMBED_MODEL = "all-mpnet-base-v2"   # sentence-transformers model for dense retrieval
