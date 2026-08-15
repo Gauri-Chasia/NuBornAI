@@ -1,7 +1,6 @@
 # eval/metrics.py — standard information-retrieval metrics, computed purely
 # from which source documents got retrieved vs. which were labeled relevant.
-# No LLM calls anywhere in here — this measures the retriever, not the
-# generator.
+# No LLM calls anywhere in here — this measures the retriever, not the generator.
 
 import math
 
