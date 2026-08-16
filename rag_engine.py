@@ -2,6 +2,7 @@
 # hybrid search, QA pipeline), refactored into a reusable engine class.
 # No behavior changes from the notebook version, just no ipywidgets / prints.
 
+#hi 
 import pickle
 import re
 import textwrap
